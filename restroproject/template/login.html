@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin-top: 30px;
+
+    }
+
+    .background {
+        background-image: url('img/login.png');
+        /* Replace with your background image URL */
+        background-size: cover;
+        filter: blur(8px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .login-form {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        /* Add this */
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .signup-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div class="login-form">
+                    <span class="close" onclick="closeLoginBox()">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword"
+                                placeholder="Enter your password">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" onclick="login()">Login</button>
+                        <p class="forgot-password"><a href="#">Forgot Password</a></p>
+                        <hr>
+                        <button type="button" class="btn btn-outline-dark btn-block" onclick="loginWithGoogle()">Login
+                            with Google</button>
+                        <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginWithGoogle() {
+            alert("Logging in with Google...");
+        }
+
+        function closeLoginBox() {
+            window.location.href = "home.html"; // Replace with the URL of your new page
+        }
+
+    </script>
+
+<script>
+    function login() {
+        // Get the values of the email and password fields
+        var email = document.getElementById('inputEmail').value;
+        var password = document.getElementById('inputPassword').value;
+
+        // Perform your login checks here
+        // For example, you might send an AJAX request to a server
+        
+        // Assuming the login is successful for this example
+        var loginSuccessful = true;
+
+        if (loginSuccessful) {
+            // Redirect to the next page
+            window.location.href = "index.html"; // Replace with the URL of your next page
+        } else {
+            // Handle unsuccessful login (e.g., show an error message)
+            alert("Login failed. Please try again.");
+        }
+    }
+</script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- You can link your custom styles here -->
+</head>
+<style>
+    .background {
+        background-image: url('img/login.png');
+        /* Replace with your background image URL */
+        background-size: cover;
+        filter: blur(8px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
+
+<body>
+    <div class="background"></div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h2 class="text-center mb-4">Create an Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputFullName">Full Name</label>
+                            <input type="text" class="form-control" id="inputFullName"
+                                placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheckbox" required>
+                            <label class="form-check-label" for="termsCheckbox">I accept the terms and
+                                conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Create Account</button>
+                    </form>
+                    <hr class="my-4">
+                    <button type="button" class="btn btn-outline-dark btn-block" onclick="continueWithGoogle()">Continue
+                        with Google</button>
+                    <p class="text-center mt-3">Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function continueWithGoogle() {
+            alert("Continuing with Google...");
+            // Add your Google authentication logic here
+        }
+
+    // Function to handle form submission
+    function createAccount(event) {
+        event.preventDefault(); // Prevents the form from submitting in the default way
+
+        // Get the value entered in the Full Name field
+        var fullName = document.getElementById("inputFullName").value;
+
+        // Redirect to a new page
+        window.location.href = "index.html";
+
+        // Display a welcome message using an alert
+        alert("Welcome, " + fullName + "!");
+    }
+
+    // Add an event listener to the form
+    document.querySelector('form').addEventListener('submit', createAccount);
+</script>
+
+
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
