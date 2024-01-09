@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +27,10 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -47,7 +48,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Supreme</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -100,7 +101,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -114,7 +115,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-2.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -128,7 +129,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-3.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -142,7 +143,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-4.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -156,7 +157,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-2.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -170,7 +171,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-3.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -184,7 +185,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-4.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -198,7 +199,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="">
                             </div>
                             <h5 class="mb-0">Full Name</h5>
                             <small>Designation</small>
@@ -297,7 +298,7 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
