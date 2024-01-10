@@ -7,11 +7,9 @@ django-admin createproject restroproject  #create project
 cd restroproject
 django manage.py createapp restroapp      #create app
 
+run -
 
-settings.py 
+python manage.py runserver
 
-INSTALLED_APPS = [
-    
-    'restroapp',
-]
+
 
