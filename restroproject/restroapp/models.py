@@ -1,3 +1,12 @@
+# reservations/models.py
 from django.db import models
 
-# Create your models here.
+class Reservation(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    datetime = models.DateTimeField()
+    no_of_people = models.IntegerField()
+    special_request = models.TextField()
+
+    def __str__(self):
+        return self.name

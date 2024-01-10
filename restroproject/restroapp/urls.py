@@ -13,6 +13,7 @@ urlpatterns = [
     path('team.html',views.team,name='team'),
     path('terms&condition.html',views.terms,name='terms'),
     path('testimonial.html',views.testimonial,name='testimonial'),
+    path('success_test.html',views.success,name='success'),
 
 
 ]
