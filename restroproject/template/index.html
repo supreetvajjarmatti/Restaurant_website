@@ -616,7 +616,8 @@
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                         <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
+                        <form method="post" action="{% url 'reservation' %}">
+                            {% csrf_token %}
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -684,7 +685,7 @@
                 </div>
             </div>
         </div>
-        <!-- Reservation Start -->
+        <!-- Reservation end -->
 
 
         <!-- Team Start -->

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ReservationForm
+from .models import Reservation
 
 def index(request):
     return render(request, 'index.html')
@@ -20,15 +21,7 @@ def service(request):
     return render(request, 'service.html')
 
 def table_booking(request):
-    if request.method == 'POST':
-        form = ReservationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('thank_you')
-    else:
-        form = ReservationForm()
-
-    return render(request, 'reservations/book_table.html', {'form': form})
+    return render(request, 'table_booking.html')
 
 def team(request):
     return render(request, 'team.html')
@@ -41,3 +34,14 @@ def testimonial(request):
 
 def success(request):
     return render(request, 'success_page.html')
+
+def reservation_view(request):
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reservation_success')  # You can create a success page
+    else:
+        form = ReservationForm()
+
+    return render(request, 'your_app/reservation.html', {'form': form})
