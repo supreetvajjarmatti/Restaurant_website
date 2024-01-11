@@ -7,6 +7,3 @@ class Reservation(models.Model):
     datetime = models.DateTimeField()
     no_of_people = models.IntegerField()
     special_request = models.TextField()
-
-    def __str__(self):
-        return self.name

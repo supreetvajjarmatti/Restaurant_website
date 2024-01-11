@@ -77,10 +77,11 @@ WSGI_APPLICATION = 'restroproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        "NAME": "restaurant",
-        "USER":"root",
-        "PASSWORD":"",
-        "HOST":"localhost",
+        'NAME': 'restaurant',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
